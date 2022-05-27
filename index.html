@@ -16,7 +16,7 @@
 
 
     <!-- Main -->
-    <main>
+    <main id="mySpace">
 
         <!-- Left part -->
         <section class="left_part">
@@ -24,20 +24,57 @@
             <!-- User -->
             <div class="user">
 
+                <div class="name_pic">
+
+                    <img src="https://unsplash.it/300/300?image=34" alt="user">
+                    <h4>Sofia</h4>
+                </div>
+
+                <div class="user_icons">
+
+                    <!-- icona 1 2 e 3 -->
+                    <i class="icon_asd fa-regular fa-circle"></i>
+                    <i class="icon_asd fa-solid fa-message"></i>
+                    <i class="icon_asd fa-solid fa-ellipsis-vertical"></i>
+                </div>
             </div>
 
             <!-- Alert -->
             <div class="alert">
 
+                <div class="alert_icon">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div class="alert_text">
+                    <h4>Ricevi notifiche di nuovi messaggi</h4>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
             </div>
 
             <!-- Searchbar -->
             <div class="searchbar">
 
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
 
             <!-- Contacts -->
+            <!-- div che verrà ripetuto tante volte quanti sono i contatti nel data tramite un v-for -->
             <div class="contacts">
+
+                <div v-for="(item, i) in contacts" class="name_pic card_c">
+
+                    <img :src="item.avatar" :alt="item.name">
+
+                    <div class="usernamemsg">
+                        
+                        <h4>{{item.name}}</h4>
+                        <span>Ultimo messaggio inviato</span>
+                    </div>
+                    <div class="msg_hour">
+                        <span>12:00</span>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -68,7 +105,7 @@
     <!-- My JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/lemiefunzioniscript.js"></script>
-    <script type="text/javascript" src="js/lezione.js"></script>
+    <!-- <script type="text/javascript" src="js/data.js"></script> -->
     <script type="text/javascript" src="js/script.js"></script>
 
 </body>
