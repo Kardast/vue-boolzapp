@@ -1,0 +1,77 @@
+/* Regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8dbd5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 80%;
+    height: 95vh;
+    display: flex;
+    /* debug */
+    background-color: rgb(141, 108, 108);
+}
+
+/* Left part */
+.left_part{
+    width: 35%;
+}
+
+.left_part div{
+    width: 100%;
+    /* debug */
+    background-color: yellow;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.left_part .user{
+    height: 60px;
+}
+
+.left_part .alert{
+    height: 60px;
+}
+
+.left_part .searchbar{
+    height: 40px;
+}
+
+.left_part .contacts{
+    height: calc(100% - 160px);
+}
+
+/* Right part */
+.right_part{
+    width: 65%;
+}
+
+.right_part div{
+    width: 100%;
+    /* debug */
+    background-color: yellow;
+    /* height: 50px; */
+    border: 1px solid black;
+}
+
+.right_part .friend{
+    height: 60px;
+}
+
+.right_part .chat{
+    height: calc(100% - 130px);
+    overflow: hidden;
+}
+
+.right_part .your_chat{
+    height: 70px;
+}
