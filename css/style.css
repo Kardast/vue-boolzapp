@@ -15,6 +15,7 @@ body{
 
 main{
     width: 80%;
+    min-width: 700px;
     height: 95vh;
     display: flex;
     /* debug */
@@ -24,47 +25,167 @@ main{
 /* Left part */
 .left_part{
     width: 35%;
+    min-width: 300px;
+    background-color: #ffffff;
 }
 
 .left_part div{
     width: 100%;
-    /* debug */
-    background-color: yellow;
-    height: 50px;
-    border: 1px solid black;
 }
 
-.left_part .user{
+/* User AND Friend parts */
+.left_part .user, .right_part .user{
     height: 60px;
+    display: flex;
+    background-color: #eaeaea;
 }
 
+.left_part .name_pic, .right_part .name_pic{
+    display: flex;
+    align-items: center;
+}
+
+.name_pic img{
+    width: 45px;
+    margin: 0 5px;
+    border-radius: 25px;
+}
+
+.left_part .user_icons, .right_part .user_icons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 8px
+}
+
+.user_icons .icon_asd, .right_part .icon_asd{
+    margin: 0 5px;
+    color: #b1b1b1;
+}
+
+/* Alert */
 .left_part .alert{
     height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #8edafc;
 }
 
-.left_part .searchbar{
+.alert .alert_icon{
+    width: 50px;
+    margin: 0 5px;
+}
+
+.alert_icon .fa-bell-slash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #8edafc;
+    width: 40px;
     height: 40px;
+    border-radius: 25px;
+}
+
+.alert_text a{
+    font-size: 14px;
+    color: rgb(241, 99, 99);
+}
+
+/* Searchbar */
+.left_part .bar, .right_part .bar{
+    height: 40px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_part .bar .fa-magnifying-glass{
+    color: #b6b9bb;
+    width: 15%;
+    background-color: #fff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    border-right: 0;
+}
+
+.left_part .bar input{
+    width: 83%;
+    height: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
 }
 
 .left_part .contacts{
     height: calc(100% - 160px);
+    overflow: scroll;
+}
+
+.left_part .card_c{
+    height: 75px;
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.096);
+}
+
+.contacts img{
+    width: 45px;
+    margin: 0 5px;
+    border-radius: 25px;
+}
+
+.name_pic .usernamemsg{
+    margin-left: 5px;
+    padding-bottom: 10px;
+    width: 70%;
+}
+
+.usernamemsg span{
+    color: #b6b9bb;
+    font-size: 14px
+}
+
+.card_c .msg_hour{
+    width: 25%;
+    text-align: end;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    color: #b6b9bb;
+    font-size: 13px;
 }
 
 /* Right part */
 .right_part{
     width: 65%;
+    min-width: 400px;
+
+}
+
+.right_part .user{
+    width: 100%;
+}
+
+.right_part .name_pic{
+    width: 80%;
+}
+
+.right_part span{
+    color: #b6b9bb;
+    font-size: 14px
+}
+
+.right_part .user_icons{
+    width: 20%;
 }
 
 .right_part div{
     width: 100%;
     /* debug */
     background-color: yellow;
-    /* height: 50px; */
     border: 1px solid black;
-}
-
-.right_part .friend{
-    height: 60px;
 }
 
 .right_part .chat{
@@ -75,3 +196,23 @@ main{
 .right_part .your_chat{
     height: 70px;
 }
+
+/* da adattare al lato destro */
+
+/* .right_part .bar .fa-magnifying-glass{
+    color: #b6b9bb;
+    width: 15%;
+    background-color: #fff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    border-right: 0;
+}
+
+.right_part .bar input{
+    width: 83%;
+    height: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+} */
