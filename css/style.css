@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Lato', sans-serif;
 }
 
 main{
@@ -18,8 +19,10 @@ main{
     min-width: 700px;
     height: 95vh;
     display: flex;
-    /* debug */
-    background-color: rgb(141, 108, 108);
+}
+
+a{
+    text-decoration: none;
 }
 
 /* Left part */
@@ -164,6 +167,7 @@ main{
 
 }
 
+/* Friend */
 .right_part .user{
     width: 100%;
 }
@@ -177,6 +181,10 @@ main{
     font-size: 14px
 }
 
+.right_part .user_icons a {
+    margin: 0 5px;
+}
+
 .right_part .user_icons{
     width: 20%;
 }
@@ -184,35 +192,77 @@ main{
 .right_part div{
     width: 100%;
     /* debug */
-    background-color: yellow;
-    border: 1px solid black;
+    /* background-color: yellow;
+    border: 1px solid black; */
 }
 
+/* Chat */
 .right_part .chat{
     height: calc(100% - 130px);
     overflow: hidden;
+    background-image: linear-gradient(rgba(228, 220, 212, 0.9), rgba(228, 220, 212, 0.9)), url("../img/wabg.jpg");
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px 0px 100px;
 }
 
+.chat .msg_line{
+    width: 100%;
+    display: flex;
+    min-width: 400px;
+}
+
+.chat .chat_box{
+    width: 320px;
+    height: 60px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    padding: 15px 10px 5px 10px;
+    font-size: 15px;
+}
+
+.sent_position{
+    justify-content: flex-end;
+}
+
+.sent_color{
+    background-color: #d5f9ba;
+}
+
+.received_color{
+    background-color: white;
+}
+
+.chat_box .time_space{
+    text-align: end;
+    margin-top: 4px;
+}
+
+.chat_box span{
+    font-size: 11px;
+}
+
+/* Your chat */
 .right_part .your_chat{
     height: 70px;
 }
 
-/* da adattare al lato destro */
 
-/* .right_part .bar .fa-magnifying-glass{
-    color: #b6b9bb;
-    width: 15%;
-    background-color: #fff;
-    height: 30px;
+.right_part a{
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(128, 128, 128, 0.199);
-    border-right: 0;
+}
+
+.right_part .bar .fa-face-smile, .right_part .bar .fa-microphone{
+    color: #6b7376;
+    font-size: 20px;
 }
 
 .right_part .bar input{
-    width: 83%;
-    height: 30px;
+    width: 80%;
+    height: 55px;
     border: 1px solid rgba(128, 128, 128, 0.199);
-} */
+    border-radius: 5px;
+}
