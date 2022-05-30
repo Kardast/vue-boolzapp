@@ -5,6 +5,7 @@ const myRoot = new Vue ({
         activeChat: 0,
         newMessage: "",
         newReply: "",
+        newSearch: "",
         contacts: [
             {
                 name: 'Michele',
@@ -192,6 +193,22 @@ const myRoot = new Vue ({
                 this.newMessage = "";
                 this.newReply = setTimeout(this.addReply, 1000);
             }
+        },
+        findFriend(){
+            this.contacts.forEach((element, i) => {
+                if (this.contacts[i].name.toLowerCase().includes(this.newSearch.toLowerCase())) {
+                    this.contacts[i].visible = true;
+                    console.log("yes", this.contacts[i].visible);
+                } else {
+                    this.contacts[i].visible = false
+                    console.log("no", this.contacts[i].visible);
+                }
+            });
         }
     }
 });
+
+// leggo input
+// ciclo i contatti
+// se input è contenuto (.contains) nel nome del contatto -> visible = true
+// altrimenti visible = false
