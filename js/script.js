@@ -4,6 +4,7 @@ const myRoot = new Vue ({
     data: {
         activeChat: 0,
         newMessage: "",
+        newReply: "",
         contacts: [
             {
                 name: 'Michele',
@@ -172,6 +173,14 @@ const myRoot = new Vue ({
         clickContact(index){
             this.activeChat = index;
         },
+        addReply(){
+            const newMsg = {
+                date: 'da metterci l ora precisa',
+                message: "ok",
+                status: 'received'
+            }
+            this.contacts[this.activeChat].messages.push(newMsg);
+        },
         addMessage(){
             const nMsg = {
                 date: 'da metterci l ora precisa',
@@ -181,6 +190,7 @@ const myRoot = new Vue ({
             if (this.newMessage.trim() !== "") {
                 this.contacts[this.activeChat].messages.push(nMsg);
                 this.newMessage = "";
+                this.newReply = setTimeout(this.addReply, 1000);
             }
         }
     }
