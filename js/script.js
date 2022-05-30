@@ -204,11 +204,6 @@ const myRoot = new Vue ({
                     console.log("no", this.contacts[i].visible);
                 }
             });
-        }
+        },
     }
 });
-
-// leggo input
-// ciclo i contatti
-// se input è contenuto (.contains) nel nome del contatto -> visible = true
-// altrimenti visible = false

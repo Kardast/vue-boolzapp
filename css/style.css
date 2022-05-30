@@ -201,6 +201,10 @@ a{
     background-color: #e9ebeb;
 }
 
+.contacts .no_display{
+    display: none;
+}
+
 /* Chat */
 .right_part .chat{
     height: calc(100% - 130px);

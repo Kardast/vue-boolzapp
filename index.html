@@ -68,7 +68,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input 
                 v-model="newSearch" 
-                @keyup.enter="findFriend" 
+                @keyup="findFriend" 
                 type="text" 
                 placeholder="   Cerca o inizia una nuova chat">
             </div>
@@ -82,8 +82,7 @@
                 class="name_pic card_c" 
                 :key="i"
                 @click="clickContact(i)"
-                :class="i === activeChat ? 'active' : '' "
-                :class="item.visible === false ? 'no_display' : 'prova' ">
+                :class="[i === activeChat ? 'active' : '', item.visible === false ? 'no_display' : ''] ">
 
                     <img :src="item.avatar" :alt="item.name">
 
