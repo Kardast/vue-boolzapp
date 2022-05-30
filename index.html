@@ -165,7 +165,11 @@
 
                     <i class="fa-regular fa-face-smile"></i>
                 </a>
-                <input type="text" placeholder="   Scrivi un messaggio">
+                <input 
+                v-model="newMessage"
+                @keyup.enter="addMessage" 
+                type="text" 
+                placeholder="   Scrivi un messaggio">
                 <a href="#">
                 
                     <i class="fa-solid fa-microphone"></i>

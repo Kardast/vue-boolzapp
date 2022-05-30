@@ -3,6 +3,7 @@ const myRoot = new Vue ({
     el: "#mySpace",
     data: {
         activeChat: 0,
+        newMessage: "",
         contacts: [
             {
                 name: 'Michele',
@@ -170,6 +171,17 @@ const myRoot = new Vue ({
     methods: {
         clickContact(index){
             this.activeChat = index;
+        },
+        addMessage(){
+            const nMsg = {
+                date: 'da metterci l ora precisa',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            if (this.newMessage.trim() !== "") {
+                this.contacts[this.activeChat].messages.push(nMsg);
+                this.newMessage = "";
+            }
         }
     }
 });
