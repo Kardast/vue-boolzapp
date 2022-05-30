@@ -73,7 +73,12 @@
             <!-- div che verrà ripetuto tante volte quanti sono i contatti nel data tramite un v-for -->
             <div class="contacts">
 
-                <div v-for="(item, i) in contacts" class="name_pic card_c" :key="i">
+                <div 
+                v-for="(item, i) in contacts" 
+                class="name_pic card_c" 
+                :key="i"
+                @click="clickContact(i)"
+                :class="i === activeChat ? 'active' : '' ">
 
                     <img :src="item.avatar" :alt="item.name">
 
@@ -96,13 +101,14 @@
             <!-- Friend -->
             <div class="user">
 
-                <div class="name_pic">
+                <div 
+                class="name_pic">
 
-                    <img src="https://unsplash.it/300/300?image=23" alt="Michele">
+                    <img :src="contacts[activeChat].avatar" alt="contacts[activeChat].name">
 
                     <div>
                         
-                        <h4>Michele</h4>
+                        <h4>{{contacts[activeChat].name}}</h4>
                         <span>Ultimo accesso oggi alle 12:00</span>
                     </div>
 
@@ -132,7 +138,7 @@
                 <!-- creazione di dive contentente messaggi, se mandato da friend associa classe verde che lo sposta a destra, se lo manda l'utente associa classe bianca che lo sposta a sinistra -->
                 <div 
                 class="msg_line"
-                v-for="(item2, j) in contacts[0].messages" 
+                v-for="(item2, j) in contacts[activeChat].messages" 
                 :key="j"
                 :class="item2.status === 'sent' ? 'sent_position' : '' ">
                     <div 

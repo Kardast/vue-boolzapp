@@ -2,6 +2,7 @@ const myRoot = new Vue ({
 
     el: "#mySpace",
     data: {
+        activeChat: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -167,6 +168,8 @@ const myRoot = new Vue ({
         ]        
     },
     methods: {
-        
+        clickContact(index){
+            this.activeChat = index;
+        }
     }
 });

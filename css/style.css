@@ -93,6 +93,7 @@ a{
 .alert_text a{
     font-size: 14px;
     color: rgb(241, 99, 99);
+    text-decoration: underline;
 }
 
 /* Searchbar */
@@ -194,6 +195,10 @@ a{
     /* debug */
     /* background-color: yellow;
     border: 1px solid black; */
+}
+
+.contacts .active{
+    background-color: #e9ebeb;
 }
 
 /* Chat */
