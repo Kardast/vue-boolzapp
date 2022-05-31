@@ -173,7 +173,7 @@ a{
     padding-right: 5px;
     padding-bottom: 25px;
     color: #b6b9bb;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* Right part */
@@ -239,7 +239,6 @@ a{
 
 .chat .chat_box{
     width: 350px;
-    height: 60px;
     border-radius: 9px;
     margin-bottom: 15px;
     padding: 15px 10px 5px 10px;
