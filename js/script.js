@@ -7,6 +7,7 @@ const myRoot = new Vue ({
         newReply: "",
         newSearch: "",
         checkPop: "",
+        dateTime: "",
         contacts: [
             {
                 name: 'Michele',
@@ -190,7 +191,7 @@ const myRoot = new Vue ({
         },
         addReply(){
             const newMsg = {
-                date: 'da metterci l ora precisa',
+                date: this.getDate() + ' ' + this.getTime(),
                 message: "ok",
                 status: 'received'
             }
@@ -198,7 +199,7 @@ const myRoot = new Vue ({
         },
         addMessage(){
             const nMsg = {
-                date: 'da metterci l ora precisa',
+                date: this.getDate() + ' ' + this.getTime(),
                 message: this.newMessage,
                 status: 'sent'
             }
@@ -218,6 +219,18 @@ const myRoot = new Vue ({
                     console.log("no", this.contacts[i].visible);
                 }
             });
+        },
+        getDate(){
+            const d = new Date();
+            let today = d.toLocaleDateString();
+            console.log(today);
+            return today;
+        },
+        getTime(){
+            const t = new Date();
+            let now = t.toLocaleTimeString();
+            console.log(now);
+            return now;
         }
     }
 });

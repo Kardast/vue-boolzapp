@@ -80,7 +80,7 @@
             <div class="contacts">
 
                 <div 
-                v-for="(item, i) in contacts" 
+                v-for="(item, i, array) in contacts" 
                 class="name_pic card_c" 
                 :key="i"
                 @click="clickContact(i)"
@@ -91,10 +91,10 @@
                     <div class="usernamemsg">
                         
                         <h4>{{item.name}}</h4>
-                        <span>Ultimo messaggio inviato</span>
+                        <span>{{item.messages[item.messages.length - 1].message}}</span>
                     </div>
                     <div class="msg_hour">
-                        <span>12:00</span>
+                        <span>{{item.messages[item.messages.length - 1].date}}</span>
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@
                     <div>
                         
                         <h4>{{contacts[activeChat].name}}</h4>
-                        <span>Ultimo accesso oggi alle 12:00</span>
+                        <span>{{'Ultimo accesso oggi alle: ' + contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date}}</span>
                     </div>
 
                 </div>
