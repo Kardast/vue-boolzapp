@@ -181,7 +181,12 @@ const myRoot = new Vue ({
                 console.log(this.checkPop);
             } else {
                 this.checkPop = -1
+                console.log(this.checkPop);
             }
+        },
+        deleteMsg(index){
+            this.contacts[this.activeChat].messages.splice(index,1)
+            this.checkPop = -1
         },
         addReply(){
             const newMsg = {

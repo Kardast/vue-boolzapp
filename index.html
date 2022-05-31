@@ -160,7 +160,9 @@
                                 class="popup_info"
                                 :class="checkPop === j ? 'display_popup' : '' ">
                                     <p>Message info</p>
-                                    <p>Delete message</p>
+                                    <p
+                                    @click="deleteMsg(j)">
+                                    Delete message</p>
                                 </div>
                             </p>
                             <i 
