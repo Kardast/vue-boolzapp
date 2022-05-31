@@ -238,12 +238,50 @@ a{
 }
 
 .chat .chat_box{
-    width: 320px;
+    width: 350px;
     height: 60px;
     border-radius: 9px;
     margin-bottom: 15px;
     padding: 15px 10px 5px 10px;
     font-size: 15px;
+}
+
+.chat .msg_box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.msg_box .fa-angle-down{
+    color: #8da17f;
+    font-size: 18px;
+}
+
+.msg_box .popup_info{
+    color: rgb(46, 46, 46);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: white;
+    width: 150px;
+    height: 80px;    
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.199);
+    position: absolute;
+    z-index: 10;
+    margin-left: 150px;
+    margin-top: 15px;
+    display: none;
+}
+
+.msg_box .display_popup{
+    display: block;
+}
+
+.popup_info p{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sent_position{

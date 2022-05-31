@@ -6,6 +6,7 @@ const myRoot = new Vue ({
         newMessage: "",
         newReply: "",
         newSearch: "",
+        checkPop: "",
         contacts: [
             {
                 name: 'Michele',
@@ -20,12 +21,12 @@ const myRoot = new Vue ({
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Ricordati di stendere i panni',
-                        status: 'sent'
+                        status: 'sent',
                     },
                     {
                         date: '10/01/2020 16:15:22',
                         message: 'Tutto fatto!',
-                        status: 'received'
+                        status: 'received',
                     }
                 ],
             },
@@ -64,12 +65,12 @@ const myRoot = new Vue ({
                     {
                         date: '28/03/2020 10:20:10',
                         message: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
+                        status: 'sent',
                     },
                     {
                         date: '28/03/2020 16:15:22',
                         message: 'Ah scusa!',
-                        status: 'received'
+                        status: 'received',
                     }
                 ],
             },
@@ -86,7 +87,7 @@ const myRoot = new Vue ({
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
+                        status: 'received',
                     }
                 ],
             },
@@ -174,6 +175,14 @@ const myRoot = new Vue ({
         clickContact(index){
             this.activeChat = index;
         },
+        popUp(index){
+            if (this.checkPop !== index) {
+                this.checkPop = index;
+                console.log(this.checkPop);
+            } else {
+                this.checkPop = -1
+            }
+        },
         addReply(){
             const newMsg = {
                 date: 'da metterci l ora precisa',
@@ -204,6 +213,6 @@ const myRoot = new Vue ({
                     console.log("no", this.contacts[i].visible);
                 }
             });
-        },
+        }
     }
 });

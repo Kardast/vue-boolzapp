@@ -151,9 +151,23 @@
                     class="chat_box"
                     :class="item2.status === 'sent' ? 'sent_color' : 'received_color' ">
 
-                        <div>
+                        <div class="msg_box">
 
-                            <p>{{item2.message}}</p>
+                            <p>
+                                {{item2.message}}
+
+                                <div 
+                                class="popup_info"
+                                :class="checkPop === j ? 'display_popup' : '' ">
+                                    <p>Message info</p>
+                                    <p>Delete message</p>
+                                </div>
+                            </p>
+                            <i 
+                            @click="popUp(j)"
+                            class="fa-solid fa-angle-down">
+                            </i>
+                            
                         </div>
 
                         <div class="time_space">
